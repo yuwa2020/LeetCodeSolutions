@@ -44,7 +44,6 @@ wheels/
 *.a
 
 # Java
-*.class
 target/
 
 # JavaScript/Node

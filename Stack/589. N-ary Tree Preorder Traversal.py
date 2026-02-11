@@ -12,10 +12,12 @@ class Solution(object):
         :type root: Node
         :rtype: List[int]
         """
+        if not root:
+            return []
         output = []
         output.append(root.val)
         trunk = root
-
+        
         def find_child(trunk):
 
             childn = trunk.children
@@ -23,7 +25,6 @@ class Solution(object):
             for child in childn:
                 output.append(child.val)
                 find_child(child)
-            
 
         find_child(trunk)
 
